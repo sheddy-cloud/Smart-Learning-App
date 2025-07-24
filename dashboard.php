@@ -8,70 +8,25 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+if (!isset($_SESSION['user_id']) && isset($_COOKIE['user_id'])) {
+    $_SESSION['user_id'] = $_COOKIE['user_id'];
+    // Optionally, fetch role from DB using user_id
+}
+
+
 $role = $_SESSION['role'];
 $userId = $_SESSION['user_id'];
 ?>
 <!DOCTYPE html>
 <html>
 <head>
+   
+   <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartDashboard</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/dashboardstyle.css">
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            height: 100vh;
-        }
-
-        .sidebar {
-            width: 220px;
-            background-color: #003f8a;
-            color: #fff;
-            padding: 20px;
-            flex-shrink: 0;
-        }
-
-        .sidebar h2 {
-            margin-top: 0;
-            font-size: 22px;
-        }
-
-        .sidebar a {
-            display: block;
-            margin: 15px 0;
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .sidebar a:hover {
-            text-decoration: underline;
-        }
-
-        .content {
-            flex-grow: 1;
-            padding: 20px;
-            background: #f0f2f5;
-            overflow-y: auto;
-        }
-
-        .header {
-            background: #fff;
-            padding: 10px 20px;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .header span {
-            float: right;
-        }
-
-        .material {
-            background: #fff;
-            padding: 15px;
-            margin-bottom: 15px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-        }
+        
     </style>
 </head>
 <body>

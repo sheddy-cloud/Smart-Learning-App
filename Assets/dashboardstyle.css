@@ -1,0 +1,94 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    background-color: #f4f6f9;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #2e3a59;
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+    height: 100%;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sidebar p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    background: #3c4f76;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background: #50638b;
+}
+
+/* Content Area */
+.content {
+    margin-left: 270px;
+    padding: 30px;
+    flex: 1;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.material {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.material h4 {
+    margin-bottom: 10px;
+    color: #2e3a59;
+}
+
+.material a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.material video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+
