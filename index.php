@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>EduLearn - Login</title>
+    <title>smaartLearn - Login</title>
     <link rel="stylesheet" href="assets/style.css"> <!-- optional -->
 </head>
 <body>
