@@ -1,20 +1,21 @@
-<form method="post" action="" onsubmit="return validateForm()">
-    <label>Username:</label><br>
-    <input type="text" name="username" id="username" required><br><br>
+<?php
+include 'includes/db.php';
 
-    <label>Password:</label><br>
-    <input type="password" name="password" id="password" required><br><br>
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+    $role = $_POST['role'];
 
-    <label>Confirm Password:</label><br>
-    <input type="password" id="confirm_password" required><br><br>
+    $stmt = $conn->prepare("INSERT INTO users (username, password, role) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $username, $password, $role);
 
-    <label>Role:</label><br>
-    <select name="role" required>
-        <option value="">-- Select Role --</option>
-        <option value="student">Student</option>
-        <option value="teacher">Teacher</option>
-    </select><br><br>
-
-    <button type="submit">Register</button>
-</form>
-<script src="assets/form.js"></script>
+    if ($stmt->execute()) {
+        header("Location: loginForm.php");
+        exit();
+    } else {
+        echo "Registration failed. Try another username. <a href='registerForm.php'>Back</a>";
+    }
+} else {
+    header("Location: registerForm.php");
+    exit();
+}
