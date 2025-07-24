@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to Smart Learning App</title>
+    <title>Welcome to SmartLearn</title>
     <link rel="stylesheet" href="assets/style.css">
     <style>
         body {
@@ -46,7 +46,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome to EduLearn</h1>
+        <h1>Welcome to Smart Learning App</h1>
         <p>Your simple platform for uploading, sharing, and learning with educational content.</p>
 
         <div class="get-started">
