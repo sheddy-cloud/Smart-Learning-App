@@ -36,6 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "User not found. <a href='loginForm.php'>Try again</a>";
     }
 } else {
-    header("Location: loginForm.php");
+    header("Location: dashboard.php");
     exit();
 }
